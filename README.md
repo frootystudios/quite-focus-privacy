@@ -7,4 +7,4 @@ Quiet Focus stores timer state locally and uses Chrome Sync for preferences such
 After uninstall, Chrome may open an optional Google Forms feedback page. Information is provided to FrootyStudios only if the user chooses to submit that form, as described in the policy.
 
 Published via GitHub Pages:
-<https://frootystudios.github.io/Quiet-focus-privacy/>
+<https://frootystudios.github.io/quite-focus-privacy/>
