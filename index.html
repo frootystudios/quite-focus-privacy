@@ -1,317 +1,389 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="color-scheme" content="dark" />
-        <title>Sloth &mdash; Privacy Policy</title>
-        <meta
-            name="description"
-            content="Privacy policy for the Sloth browser extension, which controls media sessions across supported browser tabs."
-        />
-        <style>
-            :root {
-                color-scheme: dark;
-                --bg: #090b10;
-                --surface: #12151c;
-                --surface-raised: #191d26;
-                --text: #f7f8fa;
-                --muted: #9ba3b3;
-                --line: rgba(255, 255, 255, 0.1);
-                --accent: #f97316;
-                --accent-soft: rgba(249, 115, 22, 0.13);
-                --pink: #ec4899;
-                font-family: Inter, ui-sans-serif, system-ui, -apple-system,
-                    BlinkMacSystemFont, "Segoe UI", sans-serif;
-            }
-            * { box-sizing: border-box; }
-            html { scroll-behavior: smooth; }
-            body {
-                min-width: 320px;
-                min-height: 100vh;
-                margin: 0;
-                padding: 48px 20px;
-                background:
-                    radial-gradient(circle at 85% 5%, rgba(249, 115, 22, 0.13), transparent 28rem),
-                    radial-gradient(circle at 5% 90%, rgba(236, 72, 153, 0.08), transparent 24rem),
-                    var(--bg);
-                color: var(--text);
-                font-size: 16px;
-                line-height: 1.7;
-                -webkit-font-smoothing: antialiased;
-            }
-            main {
-                width: min(820px, 100%);
-                margin: 0 auto;
-                overflow: hidden;
-                border: 1px solid var(--line);
-                border-radius: 24px;
-                background: rgba(18, 21, 28, 0.94);
-                box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
-            }
-            .content { padding: clamp(28px, 6vw, 58px); }
-            header {
-                display: flex;
-                align-items: center;
-                gap: 15px;
-                margin-bottom: 8px;
-            }
-            .badge {
-                display: grid;
-                width: 50px;
-                height: 50px;
-                flex: none;
-                place-items: center;
-                border-radius: 15px;
-                background: linear-gradient(145deg, var(--pink), #f43f5e);
-                box-shadow: 0 12px 28px rgba(236, 72, 153, 0.22);
-            }
-            .badge svg {
-                width: 29px;
-                height: 29px;
-                fill: none;
-                stroke: #fff;
-                stroke-linecap: round;
-                stroke-linejoin: round;
-                stroke-width: 1.9;
-            }
-            h1, h2, p { margin-top: 0; }
-            h1 {
-                margin: 0;
-                font-size: clamp(24px, 5vw, 31px);
-                letter-spacing: -0.035em;
-            }
-            .updated {
-                margin: 0 0 30px 65px;
-                color: var(--muted);
-                font-size: 13px;
-            }
-            .lead { color: #d7dbe3; font-size: 17px; }
-            .summary {
-                margin: 25px 0 36px;
-                padding: 18px 20px;
-                border: 1px solid rgba(249, 115, 22, 0.22);
-                border-radius: 14px;
-                background: var(--accent-soft);
-            }
-            .summary strong { color: #fdba74; }
-            section {
-                padding: 28px 0;
-                border-top: 1px solid var(--line);
-            }
-            h2 {
-                margin-bottom: 10px;
-                font-size: 19px;
-                letter-spacing: -0.015em;
-            }
-            p, li { color: #c5cad4; }
-            p:last-child { margin-bottom: 0; }
-            ul { margin: 12px 0 0; padding-left: 22px; }
-            li { margin: 8px 0; }
-            code {
-                padding: 2px 6px;
-                border-radius: 5px;
-                background: var(--surface-raised);
-                color: #fdba74;
-                font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
-                font-size: 0.9em;
-            }
-            a { color: #fdba74; }
-            a:focus-visible {
-                outline: 2px solid #fdba74;
-                outline-offset: 4px;
-            }
-            footer {
-                padding: 23px clamp(28px, 6vw, 58px);
-                border-top: 1px solid var(--line);
-                background: rgba(9, 11, 16, 0.55);
-                color: var(--muted);
-                font-size: 14px;
-            }
-            @media (max-width: 520px) {
-                body { padding: 18px 12px; }
-                main { border-radius: 18px; }
-                .updated { margin-left: 0; margin-top: 12px; }
-            }
-            @media (prefers-reduced-motion: reduce) {
-                html { scroll-behavior: auto; }
-            }
-        </style>
-    </head>
-    <body>
-        <main>
-            <div class="content">
-                <header>
-                    <span class="badge" aria-hidden="true">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M8 6h9M8 10h9M8 14h6" />
-                            <path d="M17 5v10.5a3 3 0 1 1-2-2.83V7" />
-                        </svg>
-                    </span>
-                    <h1>Sloth &mdash; Privacy Policy</h1>
-                </header>
-                <p class="updated">Last updated: July 13, 2026</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Quiet Focus — Privacy Policy</title>
+    <meta
+      name="description"
+      content="Privacy policy for Quiet Focus, a persistent floating focus timer for Chrome."
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #edf5ef;
+        --surface: rgba(255, 255, 255, 0.9);
+        --surface-raised: #f1f7f3;
+        --text: #17211b;
+        --muted: #68766d;
+        --line: rgba(31, 79, 50, 0.13);
+        --accent: #2f7a4b;
+        --accent-dark: #173f29;
+        --accent-soft: rgba(101, 173, 125, 0.12);
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        min-width: 320px;
+        min-height: 100vh;
+        margin: 0;
+        padding: 48px 20px;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 88% 4%, #b8efc9 0, transparent 27rem),
+          radial-gradient(circle at 4% 94%, #d6ebdc 0, transparent 24rem),
+          var(--bg);
+        font-size: 16px;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+      main {
+        width: min(840px, 100%);
+        margin: 0 auto;
+        overflow: hidden;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        box-shadow: 0 30px 80px rgba(23, 63, 41, 0.15);
+        backdrop-filter: blur(14px);
+      }
+      .content {
+        padding: clamp(28px, 6vw, 60px);
+      }
+      header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 8px;
+      }
+      .badge {
+        display: grid;
+        width: 54px;
+        height: 54px;
+        flex: none;
+        place-items: center;
+        background: #f8fbf9;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(23, 63, 41, 0.12);
+      }
+      .badge svg {
+        width: 40px;
+        height: 40px;
+      }
+      h1,
+      h2,
+      p {
+        margin-top: 0;
+      }
+      h1 {
+        margin: 0;
+        font-size: clamp(24px, 5vw, 32px);
+        letter-spacing: -0.035em;
+      }
+      .updated {
+        margin: 0 0 30px 70px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .lead {
+        color: #46544b;
+        font-size: 17px;
+      }
+      .summary {
+        margin: 26px 0 36px;
+        padding: 18px 20px;
+        background: var(--accent-soft);
+        border: 1px solid rgba(47, 122, 75, 0.2);
+        border-radius: 15px;
+      }
+      .summary strong {
+        color: var(--accent-dark);
+      }
+      section {
+        padding: 28px 0;
+        border-top: 1px solid var(--line);
+      }
+      h2 {
+        margin-bottom: 10px;
+        font-size: 19px;
+        letter-spacing: -0.015em;
+      }
+      p,
+      li {
+        color: #4f5e54;
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+      ul {
+        margin: 12px 0 0;
+        padding-left: 22px;
+      }
+      li {
+        margin: 9px 0;
+      }
+      code {
+        padding: 2px 6px;
+        color: var(--accent-dark);
+        background: var(--surface-raised);
+        border-radius: 5px;
+        font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+        font-size: 0.9em;
+      }
+      a {
+        color: #24633b;
+      }
+      a:focus-visible {
+        outline: 3px solid rgba(47, 122, 75, 0.28);
+        outline-offset: 3px;
+      }
+      footer {
+        padding: 23px clamp(28px, 6vw, 60px);
+        color: var(--muted);
+        background: rgba(235, 245, 238, 0.7);
+        border-top: 1px solid var(--line);
+        font-size: 14px;
+      }
+      @media (max-width: 520px) {
+        body {
+          padding: 18px 12px;
+        }
+        main {
+          border-radius: 18px;
+        }
+        .updated {
+          margin-top: 12px;
+          margin-left: 0;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="content">
+        <header>
+          <span class="badge" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img">
+              <path
+                d="M7 30c2-6 6-9 11-11M41 30c-2-6-6-9-11-11M13 32v11M35 32v11M10 34H6v-9c0-7 5-13 12-15M38 34h4v-9c0-7-5-13-12-15"
+                fill="none"
+                stroke="#263139"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle cx="24" cy="22" r="13" fill="#f4bd38" />
+              <circle
+                cx="24"
+                cy="22"
+                r="5.5"
+                fill="#fff"
+                stroke="#263139"
+                stroke-width="2.5"
+              />
+            </svg>
+          </span>
+          <h1>Quiet Focus — Privacy Policy</h1>
+        </header>
+        <p class="updated">Last updated: July 15, 2026</p>
 
-                <p class="lead">
-                    Sloth is a browser extension by FrootyStudios that lets you
-                    view and control media sessions across supported YouTube,
-                    YouTube Music, Spotify, and Gaana tabs. This policy explains
-                    what information Sloth handles and how it is protected.
-                </p>
+        <p class="lead">
+          Quiet Focus — Floating Timer is a browser extension by FrootyStudios
+          that provides one persistent focus countdown and an optional floating
+          timer on websites selected by the user. This policy explains what
+          information the extension handles and how it is protected.
+        </p>
 
-                <div class="summary">
-                    <strong>In short:</strong> Sloth processes supported-tab and
-                    media information locally in your browser to provide its
-                    controls. Sloth does not send that information to
-                    FrootyStudios, sell it, use it for advertising, or use it to
-                    build a browsing profile.
-                </div>
+        <div class="summary">
+          <strong>In short:</strong> Quiet Focus does not collect or transmit
+          personal information, browsing history, website content, timer data,
+          or website-display preferences. The extension contains no analytics,
+          advertising, tracking, or remote code.
+        </div>
 
-                <section>
-                    <h2>Information Sloth handles</h2>
-                    <p>
-                        To identify and control supported media sessions, Sloth may
-                        temporarily read the following information from open
-                        YouTube, YouTube Music, Spotify, and Gaana tabs:
-                    </p>
-                    <ul>
-                        <li>The supported tab's URL and page title</li>
-                        <li>Media title, provider, artwork URL, and playback state</li>
-                        <li>Whether playback actions such as play, pause, previous, next, and repeat are available</li>
-                        <li>The state of the provider's visible media controls</li>
-                    </ul>
-                    <p>
-                        Chrome Web Store policy may classify tab URLs and website
-                        content as user data. Sloth uses this information only to
-                        provide the media controls described above.
-                    </p>
-                </section>
+        <section>
+          <h2>Information Quiet Focus handles</h2>
+          <p>
+            Quiet Focus handles only the information necessary to provide its
+            timer and user-selected website display behavior:
+          </p>
+          <ul>
+            <li>The selected focus duration and timer runtime state</li>
+            <li>Whether the floating timer is minimized or expanded</li>
+            <li>
+              Whether automatic display on HTTP and HTTPS websites is enabled
+            </li>
+            <li>
+              Website origins where the user has enabled or hidden the floating
+              timer
+            </li>
+          </ul>
+          <p>
+            The extension uses a website's origin, such as
+            <code>https://example.com</code>, only to register or exclude the
+            floating timer according to the user's choice. It does not inspect
+            or record the content of pages, form entries, search queries, or the
+            user's activity within a website.
+          </p>
+        </section>
 
-                <section>
-                    <h2>Collection, transmission, and storage</h2>
-                    <p>
-                        Supported-tab and media-session information is processed
-                        locally on your device. It is kept in memory only while
-                        needed to display the popup or sessions dashboard. Sloth
-                        does not transmit this information to FrootyStudios or any
-                        analytics, advertising, or tracking service, and does not
-                        maintain an external database of it.
-                    </p>
-                    <p>
-                        Artwork supplied by a media provider may be loaded from
-                        that provider's own content-delivery service. Those
-                        requests are subject to the provider's privacy policy and
-                        are not received or stored by FrootyStudios.
-                    </p>
-                </section>
+        <section>
+          <h2>Storage and Chrome Sync</h2>
+          <p>
+            Active timer state is stored in <code>chrome.storage.local</code> so
+            the countdown remains accurate after Chrome suspends the extension,
+            the browser restarts, or the computer sleeps.
+          </p>
+          <p>
+            Preferences—including the focus duration, automatic-display setting,
+            enabled website origins, and hidden website exclusions—are stored
+            with <code>chrome.storage.sync</code>. Chrome may synchronize these
+            preferences through the user's signed-in Chrome profile under
+            Google's Chrome Sync terms. FrootyStudios does not receive or
+            maintain an external copy of this information.
+          </p>
+        </section>
 
-                <section>
-                    <h2>Permissions and why they are used</h2>
-                    <ul>
-                        <li>
-                            <strong><code>tabs</code></strong> &mdash; find open
-                            supported media tabs, identify sessions, switch to a
-                            selected source tab, refresh a tab when the user asks,
-                            and open Sloth pages.
-                        </li>
-                        <li>
-                            <strong><code>scripting</code></strong> &mdash;
-                            reconnect Sloth's packaged content scripts to an
-                            already-open supported tab after installation, update,
-                            extension reload, or browser restart.
-                        </li>
-                        <li>
-                            <strong><code>alarms</code></strong> &mdash; run a
-                            lightweight periodic connection check for supported
-                            media tabs.
-                        </li>
-                        <li>
-                            <strong>youtube.com, spotify.com, and gaana.com host access</strong>
-                            &mdash; read media state and invoke playback controls
-                            only on the supported provider pages.
-                        </li>
-                    </ul>
-                    <p>
-                        Sloth does not request access to every website. It does not
-                        access cookies, passwords, authentication tokens,
-                        downloads, bookmarks, clipboard contents, or personal
-                        communications.
-                    </p>
-                </section>
+        <section>
+          <h2>Permissions and why they are used</h2>
+          <ul>
+            <li>
+              <strong><code>activeTab</code></strong> — identify the active
+              website and display the timer there after the user selects Show.
+            </li>
+            <li>
+              <strong><code>alarms</code></strong> — reliably finish an active
+              countdown when Chrome suspends the background service worker.
+            </li>
+            <li>
+              <strong><code>notifications</code></strong> — notify the user when
+              a focus session finishes.
+            </li>
+            <li>
+              <strong><code>scripting</code></strong> — add, remove, and restore
+              the packaged floating timer on websites selected by the user.
+            </li>
+            <li>
+              <strong><code>storage</code></strong> — save timer state and the
+              preferences described above.
+            </li>
+            <li>
+              <strong>Optional HTTP and HTTPS website access</strong> — display
+              the floating timer on a specific website chosen by the user or on
+              all websites when the user explicitly enables Show on all
+              websites.
+            </li>
+          </ul>
+          <p>
+            Website access is optional. Quiet Focus does not use it to read,
+            collect, or transmit page content. The extension does not request
+            access to cookies, passwords, authentication tokens, downloads,
+            bookmarks, clipboard contents, or personal communications.
+          </p>
+        </section>
 
-                <section>
-                    <h2>Third parties and remote code</h2>
-                    <p>
-                        Sloth contains no third-party analytics or advertising SDK
-                        and does not download or execute remote code. Its content
-                        scripts and controllers are packaged with the extension.
-                        Sloth interacts with supported provider pages already open
-                        in your browser; use of those services remains governed by
-                        each provider's own terms and privacy policy.
-                    </p>
-                </section>
+        <section>
+          <h2>Collection, transmission, and sale</h2>
+          <p>
+            Quiet Focus does not transmit timer state, preferences, website
+            origins, browsing activity, or page content to FrootyStudios or any
+            analytics, advertising, tracking, or data-broker service.
+            FrootyStudios does not sell Quiet Focus user data or use it for
+            creditworthiness, lending, advertising, or unrelated purposes.
+          </p>
+        </section>
 
-                <section>
-                    <h2>Optional uninstall feedback</h2>
-                    <p>
-                        When Sloth is uninstalled, Chrome may open an optional
-                        feedback form hosted by Google Forms. You may close the
-                        page without submitting anything. If you choose to submit
-                        a response, the information you enter is provided to
-                        FrootyStudios through Google Forms and is also processed by
-                        Google under Google's applicable privacy terms. Feedback
-                        is used only to understand problems and improve Sloth.
-                    </p>
-                </section>
+        <section>
+          <h2>Remote code and third-party services</h2>
+          <p>
+            All executable code, interface assets, and fonts used by Quiet Focus
+            are packaged with the extension. The extension does not download or
+            execute remote code and does not load third-party analytics,
+            advertising, tracking scripts, or external fonts.
+          </p>
+          <p>
+            Chrome Sync and the optional uninstall feedback form are Google
+            services and are subject to Google's applicable privacy terms.
+          </p>
+        </section>
 
-                <section>
-                    <h2>Data sharing and sale</h2>
-                    <p>
-                        FrootyStudios does not sell Sloth user data. Sloth does not
-                        share supported-tab or media-session information with
-                        FrootyStudios, advertisers, data brokers, or unrelated
-                        third parties. Voluntary uninstall feedback is handled as
-                        described above.
-                    </p>
-                </section>
+        <section>
+          <h2>Optional uninstall feedback</h2>
+          <p>
+            When Quiet Focus is uninstalled, Chrome may open an optional
+            feedback form hosted by Google Forms at
+            <a href="https://forms.gle/2JseGHa9eT6ktLdr9">this address</a>. The
+            extension does not append timer state, website origins, identifiers,
+            or other extension data to the form URL.
+          </p>
+          <p>
+            You may close the page without submitting anything. If you choose to
+            submit a response, the information you enter is provided to
+            FrootyStudios through Google Forms and processed by Google under its
+            applicable privacy terms. Voluntary feedback is used only to
+            understand issues and improve Quiet Focus.
+          </p>
+        </section>
 
-                <section>
-                    <h2>Data retention and deletion</h2>
-                    <p>
-                        Sloth does not persist supported-tab or media-session
-                        information in an external service. In-memory session data
-                        is discarded when the relevant extension page closes or
-                        its runtime context ends. To stop all local processing,
-                        close supported tabs, disable Sloth, or uninstall the
-                        extension. For deletion requests concerning feedback you
-                        voluntarily submitted, contact us using the address below.
-                    </p>
-                </section>
+        <section>
+          <h2>Data retention and deletion</h2>
+          <p>
+            Quiet Focus does not maintain an external database of timer data or
+            preferences. Disabling or uninstalling the extension stops its local
+            processing. Chrome removes extension-local data on uninstall; synced
+            extension settings may remain subject to Chrome Sync behavior and
+            the user's Google account settings.
+          </p>
+          <p>
+            To request deletion of feedback voluntarily submitted through the
+            uninstall form, contact FrootyStudios using the address below.
+          </p>
+        </section>
 
-                <section>
-                    <h2>Children's privacy</h2>
-                    <p>
-                        Sloth is a general-purpose browser utility and is not
-                        directed to children. FrootyStudios does not knowingly use
-                        Sloth to collect personal information from children.
-                    </p>
-                </section>
+        <section>
+          <h2>Children's privacy</h2>
+          <p>
+            Quiet Focus is a general-purpose productivity utility and is not
+            directed to children. FrootyStudios does not knowingly use Quiet
+            Focus to collect personal information from children.
+          </p>
+        </section>
 
-                <section>
-                    <h2>Changes to this policy</h2>
-                    <p>
-                        If Sloth's data practices or this policy change, the
-                        updated policy will be published on this page with a new
-                        "Last updated" date. Material changes will be disclosed as
-                        required by applicable Chrome Web Store policies.
-                    </p>
-                </section>
-            </div>
+        <section>
+          <h2>Changes to this policy</h2>
+          <p>
+            If Quiet Focus's data practices or this policy change, the updated
+            policy will be published on this page with a revised Last updated
+            date. Material changes will be disclosed as required by applicable
+            Chrome Web Store policies.
+          </p>
+        </section>
+      </div>
 
-            <footer>
-                Privacy questions or feedback? Contact
-                <a href="mailto:support@frootystudios.com">support@frootystudios.com</a>.
-            </footer>
-        </main>
-    </body>
+      <footer>
+        Privacy questions or feedback? Contact
+        <a href="mailto:support@frootystudios.com">support@frootystudios.com</a
+        >.
+      </footer>
+    </main>
+  </body>
 </html>
